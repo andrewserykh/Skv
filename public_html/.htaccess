@@ -1,0 +1,23 @@
+php_flag display_errors "0"
+php_flag register_globals on
+Options +FollowSymlinks
+DirectoryIndex index.php
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME} !-s
+RewriteCond %{REQUEST_URI} !/(assets/|404/|png/|js/|jpg|clearfavour)(.*)$
+RewriteCond %{SCRIPT_FILENAME} !/(assets/|404/|server/)(.*)$
+RewriteRule ^(.*)$ /index.php?params=$1 [L,QSA]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+php_value default_charset utf-8
+# compress text, html, javascript, css, xml:
+<ifModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+ErrorDocument 404 http://temp/404.php

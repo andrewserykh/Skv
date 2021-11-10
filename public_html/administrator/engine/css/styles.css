@@ -1,0 +1,537 @@
+@import url('http://fonts.googleapis.com/css?family=Ubuntu:regular,italic,bold,bolditalic&subset=cyrillic,greek,latin');
+@import url('reset.css');
+
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Ubuntu', Tahoma;
+	line-height: 100%;
+	outline: none;
+}
+
+html {
+	border: 0px;
+}
+
+body {
+	color: #FFF;
+	font-size: 9pt;
+	cursor: default;
+	background: url(../img/bckg.jpg);
+}
+
+.clear {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+	height: 0px;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #d0d9de;
+}
+
+a:hover {
+	color: #FFF;
+}
+
+#cont {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+//	z-index: 70;
+	overflow: auto;
+}
+
+.copy {
+	text-shadow: #111 1px 1px 0px;
+	text-align: center;
+	padding: 10px 0px;
+	line-height: 150%;
+}
+
+/* ========================================================
+   Верхнее меню
+   ===================================================== */
+#header {
+	z-index: 10000;
+	height: 37px;
+	line-height: 37px;
+	color: #ddd;
+	text-shadow: 0 -1px black;
+	background: url(../img/topbar.png) repeat-x;
+}
+#header .container {
+	width: 1004px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#header a {
+	line-height: 36px;
+}
+#header ul {
+	list-style: none;
+}
+#header h1 {
+	float: left;
+	font-size: 16px;
+}
+#header h1, #header h1 a {
+	color: #eee;
+}
+#header h1 a {
+	display: block;
+	text-decoration: none;
+}
+#header h1 a:hover {
+	color: #fff;
+}
+#header #nav {
+	float: right;
+	border-left: 1px solid #2f4b56;
+	border-left: 1px solid rgba(255, 255, 255, 0.05);
+	border-right: 1px solid #111;
+}
+#header #nav li {
+	float: left;
+}
+#header #nav a {
+	height: 36px;
+	display: block;
+	padding: 0 15px;
+	color: #d0d9de;
+	border-left: 1px solid #191919;
+	border-right: 1px solid #2f4b56;
+	border-right: 1px solid rgba(255, 255, 255, 0.05);
+	text-decoration: none;
+	cursor: pointer;
+}
+#header #nav a:hover {
+	background: url(../img/topbar-hover.png);
+}
+#header #nav a img {
+	float: left;
+	margin-right: 12px;
+	margin-top: 11px;
+}
+
+#header #nav li.active a, #header #nav a:active {
+	background: url(../img/topbar-active.png);
+	border-right: 0;
+	padding-right: 16px;
+	font-weight:bold;
+}
+#header #nav span {
+	display: inline-block;
+	vertical-align: text-top;
+	line-height: 16px;
+	font-size: 11px;
+	padding: 0 5px;
+	color: #fff;
+	text-shadow: 0 1px #902a27;
+	border-radius: 2px;
+	margin-left: 10px;
+	background-color: #e93631;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f65d5f), color-stop(100%, #e93631));
+	background-image: -webkit-linear-gradient(top, #f65d5f, #e93631);
+	background-image: -moz-linear-gradient(top, #f65d5f, #e93631);
+	background-image: -ms-linear-gradient(top, #f65d5f, #e93631);
+	background-image: -o-linear-gradient(top, #f65d5f, #e93631);
+	background-image: linear-gradient(top, #f65d5f, #e93631);
+	-webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.2);
+}
+
+div.header div img#logo {
+	float: left;
+}
+
+#header-bottom {
+	padding-bottom: 2px;
+	margin-bottom: 10px;
+}
+
+sup {
+	font-size: 13px;
+}
+
+/* ========================================================
+   Сообщения
+   ===================================================== */
+
+.info, .success, .warning, .error, .validation , .alert {
+	border: 1px solid;
+	margin: 10px 0px;
+	margin-left: 20px;
+	padding:15px 10px 15px 50px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	display: block;
+	float: left;
+}
+.info {
+color: #00529B;
+background-color: #BDE5F8;
+background-image: url(../img/info.png);
+}
+.success {
+color: #4F8A10;
+background-color: #DFF2BF;
+background-image:url(../img/success.png);
+}
+.alert {
+color: #9F6000;
+background-color: #FEEFB3;
+background-image: url(../img/warning.png);
+}
+.warning {
+color: #9F6000;
+background-color: #FEEFB3;
+background-image: url(../img/warning.png);
+}
+.error {
+color: #D8000C;
+background-color: #FFBABA;
+background-image: url(../img/error.png);
+}
+.validation {
+color: #D63301;
+background-color: #FFCCBA;
+background-image: url(../img/validation.png);
+}
+
+/* ========================================================
+   Информация основного окна
+   ===================================================== */
+
+.caption {
+	font-size: 12pt;
+	text-shadow: #111 1px 1px 0px;
+	text-align: left;
+	font-weight:bold;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	display: block;
+	float: left;
+}
+
+
+.label {
+	font-size: 10pt;
+	text-shadow: #111 1px 1px 0px;
+	text-align: left;
+	font-weight:bold;
+	padding-left: 20px;
+	margin-bottom: 5px;
+	display: block;
+	float: left;
+
+}
+
+.barrer {
+	display: block;
+	float: left;
+	width: 100%;
+}
+/* ========================================================
+   Реализация фильтра вариант
+   ===================================================== */
+ul.filter-menu {
+	padding-left: 20px;
+	list-style: none;
+	font-size: 12;
+	text-shadow: #111 1px 1px 0px;
+	display: block;
+	float: left;
+}
+
+ul.filter-menu li {
+	display: block;
+	float: left;
+	padding: 10px 2px;
+
+}
+
+ul.filter-menu li a {
+font-family: Tahoma, Geneva, sans-serif; 
+text-decoration: none;
+background: #5c6cb7;
+font-weight: bold;
+color: #fff; 
+padding: 6px 10px 6px 10px;
+}
+
+ul.filter-menu li a:hover {
+padding: 6px 10px 6px 10px;
+font-weight: bold;
+background: #364d95;
+color: #ff9900;
+}
+
+ul.filter-menu li a.selected {
+background: #364e95;
+color: #ff9900;
+}
+
+/* ========================================================
+   Панель инструментов
+   ===================================================== */
+ul.tools-menu {
+	padding-left: 20px;
+	padding-bottom: 40px;
+	list-style: none;
+	font-size: 12;
+	text-shadow: #111 1px 1px 0px;
+	display: block;
+	float: left;
+}
+
+ul.tools-menu li {
+	display: block;
+	float: left;
+	padding: 10px 2px;
+}
+
+ul.tools-menu li a {
+font-family: Tahoma, Geneva, sans-serif; 
+text-decoration: none;
+background: #5c6cb7;
+font-weight: bold;
+color: #fff; 
+padding: 6px 10px 6px 10px;
+}
+
+ul.tools-menu li a:hover {
+padding: 6px 10px 6px 10px;
+font-weight: bold;
+background: #364d95;
+color: #ff9900;
+}
+
+ul.tools-menu li a.selected {
+background: #364e95;
+color: #ff9900;
+}
+
+/* ========================================================
+   Таблица
+   ===================================================== */
+table {
+	*border-collapse: collapse; /* Для IE7 и старше */
+	border-spacing: 0;
+	width: 100%;	
+	z-index: 999999;
+}
+
+table a {
+	color: #000;
+}
+
+table a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+
+.bordered {
+	border: solid #ccc 1px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 1px 1px #ccc; 
+	-moz-box-shadow: 0 1px 1px #ccc; 
+	box-shadow: 0 1px 1px #ccc;         
+	font-size: 12;
+	background: #fff;
+	color: #000;
+}
+
+.bordered tr:hover {
+    background: #dce9f9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.bordered td, .bordered th {
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	padding: 10px;
+	text-align: left;    
+	vertical-align:top;
+}
+
+.bordered th {
+	background: #697fc8;
+	color: #fff;
+	font-size: 12;
+	text-align: center;
+}
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+/*----------------------*/
+
+.zebra td, .zebra th {
+    padding: 10px;
+    border-bottom: 1px solid #f2f2f2;    
+}
+
+.zebra tbody tr:nth-child(even) {
+    background: #f5f5f5;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+}
+
+.zebra th {
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+    background-image:    -moz-linear-gradient(top, #f5f5f5, #eee);
+    background-image:     -ms-linear-gradient(top, #f5f5f5, #eee);
+    background-image:      -o-linear-gradient(top, #f5f5f5, #eee); 
+    background-image:         linear-gradient(top, #f5f5f5, #eee);
+}
+
+.zebra th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;  
+}
+
+.zebra th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.zebra tfoot td {
+    border-bottom: 0;
+    border-top: 1px solid #fff;
+    background-color: #f1f1f1;  
+}
+
+.zebra tfoot td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.zebra tfoot td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}  
+
+/* ========================================================
+   Submit Button
+   ===================================================== */
+
+input[type=text] {
+	z-index: 99999;
+	padding:5px;
+	margin: 2px;
+	border:1px solid #5c6cb7;; 
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+input[type=text]:focus {
+	border-color:#fff; 
+}
+
+input[type=submit] {
+	padding: 6px 12px;
+	margin-top: 4px;
+	background: #5c6cb7;
+	color: #fff; 
+	border:0 none;
+	cursor:pointer;
+	list-style: none;
+	font-size: 12;
+	text-shadow: #111 1px 1px 0px;
+	font-family: Tahoma, Geneva, sans-serif; 
+	text-decoration: none;
+	font-weight: bold;
+}
+/* ========================================================
+   Публицакия on/off
+   ===================================================== */
+.pub-on{
+	background: #55ff55;
+	font-weight: bold;
+	color: #fff; 
+	padding: 6px 1px 6px 1px;
+}
+
+.pub-off{
+	background: #ff5555;
+	font-weight: bold;
+	color: #fff; 
+	padding: 6px 1px 6px 1px;
+}
+
+.pub-link{
+	font-weight: bold;
+	color: #5555ff; 
+	padding: 6px 1px 6px 1px;
+	text-decoration: underline;
+}
+
+.pub-red{
+	font-weight: bold;
+	color: #ff5555; 
+	padding: 6px 1px 6px 1px;
+}
+
+.pub-green{
+	font-weight: bold;
+	color: #55aa55; 
+	padding: 6px 1px 6px 1px;
+}
+
+.pub-blue{
+	font-weight: bold;
+	color: #5555aa; 
+	padding: 6px 1px 6px 1px;
+}
+
+.editlist{
+}

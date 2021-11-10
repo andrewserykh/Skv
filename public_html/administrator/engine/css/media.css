@@ -1,0 +1,70 @@
+@media (min-width:1368px) and (max-width:2100px){
+
+}
+
+@media (min-width:200px) and (max-width:800px){
+  #header {
+	background: #000;
+  }	
+  #header .container {
+	width: 100%;
+	background: #000;
+  }
+  #header #nav {
+	float: left;
+	border-left: 0px;
+	border-left: 0px;
+	border-right: 0px;
+ }
+ .editlist {
+	width: 100%;
+ }
+  .caption {
+	font-size: 8pt;
+	text-shadow: #111 1px 1px 0px;
+	text-align: left;
+	font-weight:bold;
+	padding-left: 4px;
+	margin: 0px;
+	display: block;
+  }
+  .label {
+	font-size: 8pt;
+	text-shadow: #111 1px 1px 0px;
+	text-align: left;
+	font-weight:bold;
+	padding-left: 4px;
+	margin: 0px;
+	display: block;
+  }
+  #header h1 a {
+	display: none;
+  }
+  .version{
+	display: none;
+  }
+  .user{
+	display: none;
+  }
+  input[type=text] {
+	z-index: 99999;
+	padding:3px;
+	margin: 0px;
+	display: block;
+	float: left;
+	width: 90%;
+  }
+  ul.tools-menu {
+	padding-left: 2px;
+	padding-bottom: 10px;
+	float: left;
+  }
+  .bordered {
+	font-size: 10px;
+  }
+  .bordered td, .bordered th {
+	padding: 2px;
+	text-align: left;    
+	vertical-align:top;
+  }
+}                  

@@ -1,0 +1,24 @@
+<section class="content">
+  <div class="rbmk-temp" id="ajax_rbmk_temp"></div>
+  <div class="rbmk"></div>
+</section>
+
+
+
+<script>
+function rbmk_temp() {
+  $.ajax({
+    url: "ajax_rbmk_temp.php",
+    cache: false,
+    success: function (html) {
+      $("#ajax_rbmk_temp").html(html);
+    }
+  });
+}
+
+$(document).ready(function () {
+  rbmk_temp();
+  setInterval('rbmk_temp()', 1000);
+});
+</script>
+

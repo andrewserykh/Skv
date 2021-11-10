@@ -1,0 +1,17 @@
+.rbmk {
+	background-image: url(../images/otvs-rbmk1000.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-left: 340px;
+	height: 70vh;
+}
+
+.rbmk-temp {
+	position: absolute;
+	padding-left: 0px;
+	padding-top: 0vh;
+}
+
+.rbmk-temp-value {
+	padding-top: 4vh;
+}

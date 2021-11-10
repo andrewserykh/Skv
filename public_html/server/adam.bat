@@ -1,0 +1,1 @@
+c:\xampp\php\php.exe adam4017_1.php
